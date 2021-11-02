@@ -33,7 +33,6 @@ func NewCertMonitor(hostDomains []string, additionalRootCAPaths *[]string) (Cert
 	cm.getCertPool()
 	if additionalRootCAPaths != nil {
 		err = cm.addAdditionalRootCertsFromFile()
-
 		if err != nil {
 			return CertMonitor{}, err
 		}
